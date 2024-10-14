@@ -26,7 +26,7 @@ public class StudentLaptopServiceImp {
 		
 		
 		Laptop l = new Laptop();
-		l.setLaptopId(101);
+		l.setLaptopId(102);
 		l.setConfiguration("i5");
 		l.setModelNo("inspireon 3000");
 		l.setStudent(s);
@@ -36,5 +36,14 @@ public class StudentLaptopServiceImp {
 		
 		return "save successfully";
 		
+	}
+	
+	// deu to one to one mapping student class we can get laptop object also
+	public void getStudnetAndLaptopData() {
+		
+		Student s = student.findById(152820).get();
+		System.out.println(s.getName()+"-"+s.getStudent_id());
+		
+		System.out.println(s.getLaptop().getConfiguration());
 	}
 }

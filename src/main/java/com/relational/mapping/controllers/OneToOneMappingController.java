@@ -20,5 +20,9 @@ public class OneToOneMappingController {
 		return stdLpaImp.saveDataToStdLapi();
 	}
 	
-	
+	@GetMapping("/getStudnetAndLaptopData")
+	public void getStudnetAndLaptopData() {
+		
+		 stdLpaImp.getStudnetAndLaptopData();
+	}
 }
